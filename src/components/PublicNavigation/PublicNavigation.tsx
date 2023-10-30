@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './PublicNavigation.module.scss';
-import logoImage from '../../assets/icons/Logo.svg';
-import profileIcon from '../../assets/icons/User.svg';
+import logoImage from '../../assets/icons/logo.svg';
+import profileIcon from '../../assets/icons/user.svg';
 
 const PublicNavigation = () => {
   return (
