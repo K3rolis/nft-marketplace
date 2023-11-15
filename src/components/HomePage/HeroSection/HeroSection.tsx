@@ -3,10 +3,11 @@ import styles from './HeroSection.module.scss';
 import heroImage from '../../../assets/utils/heroImage.png';
 import heroIcon from '../../../assets/icons/heroSectionIcon.png';
 import rocketIcon from '../../../assets/icons/rocketLaunch.svg';
+import Container from '../../../common/Container/Container';
 
 const HeroSection = () => {
   return (
-    <section className={styles.container}>
+    <Container className={styles.container}>
       <div className={styles.headline}>
         <div className={styles.title}>Discover digital art & Collect NFTs</div>
         <div className={styles.subtitle}> NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.</div>
@@ -44,7 +45,7 @@ const HeroSection = () => {
           <div className={styles.subtitle}>Artists</div>
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 

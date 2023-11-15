@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+@import '../../styles//mixins';
+
+.container {
+  margin: auto;
+  max-width: 64.375rem;
+  padding-inline: 30px;
+  color: $color-white;
+  gap: 2.5rem;
+
+  @include bp(sl) {
+    padding-inline: 72px;
+  }
+  @include bp(xl) {
+    padding-inline: 115px;
+  }
+}
