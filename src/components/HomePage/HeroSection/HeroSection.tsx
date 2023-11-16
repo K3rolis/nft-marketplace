@@ -2,8 +2,9 @@ import React from 'react';
 import styles from './HeroSection.module.scss';
 import heroImage from '../../../assets/utils/heroImage.png';
 import heroIcon from '../../../assets/icons/heroSectionIcon.png';
-import rocketIcon from '../../../assets/icons/rocketLaunch.svg';
+import { ReactComponent as rocketIcon } from '../../../assets/buttonIcons/rocketLaunch.svg';
 import Container from '../../../common/Container/Container';
+import Button from '../../../common/Button/Button';
 
 const HeroSection = () => {
   return (
@@ -12,7 +13,6 @@ const HeroSection = () => {
         <div className={styles.title}>Discover digital art & Collect NFTs</div>
         <div className={styles.subtitle}> NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than 20k NFT artists.</div>
       </div>
-
       <div className={styles.card}>
         <div className={styles.cardImageBox}>
           <img src={heroImage} alt="hero" className={styles.cardImage} />
@@ -25,10 +25,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className={styles.buttonBox}>
-        <img src={rocketIcon} alt="rocket icon" className={styles.buttonIcon} />
-        <div className={styles.buttonTitle}>Get Started</div>
-      </div>
+      <Button title="Get Started" component={rocketIcon} />
       <div className={styles.additionalDataBox}>
         <div className={styles.additionalData}>
           <div className={styles.title}> 240k+</div>

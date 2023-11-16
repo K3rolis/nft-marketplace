@@ -4,9 +4,9 @@ import animals from '../../../assets/trendingCollection/Animals.png';
 import mushrooms from '../../../assets/trendingCollection/Mushrooms.png';
 import machines from '../../../assets/trendingCollection/Machines.png';
 
-import foxIcon from '../../../assets/userIcons/fox.png';
-import shroomieIcon from '../../../assets/userIcons/shroomie.png';
-import robotIcon from '../../../assets/userIcons/robot.png';
+import foxIcon from '../../../assets/userIcons/user-icon-6.png';
+import shroomieIcon from '../../../assets/userIcons/user-icon-7.png';
+import robotIcon from '../../../assets/userIcons/user-icon-9.png';
 
 import Container from '../../../common/Container/Container';
 

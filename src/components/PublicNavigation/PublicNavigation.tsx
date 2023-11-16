@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './PublicNavigation.module.scss';
 import logoImage from '../../assets/icons/logo.svg';
-import profileIcon from '../../assets/icons/user.svg';
+import Button from '../../common/Button/Button';
+import { ReactComponent as profileIcon } from '../../assets/buttonIcons/user.svg';
 
 const PublicNavigation = () => {
   return (
@@ -20,11 +21,8 @@ const PublicNavigation = () => {
           <li>Marketplace</li>
           <li>Rankings</li>
           <li>Connect a wallet</li>
-          <li className={styles.buttonBox}>
-            <>
-              <img className={styles.profileImage} src={profileIcon} alt="profileIcon" />
-              <div>Sign Up</div>
-            </>
+          <li>
+            <Button title={'Sign up'} component={profileIcon}></Button>
           </li>
         </ul>
       </div>
