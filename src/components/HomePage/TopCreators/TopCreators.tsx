@@ -40,8 +40,6 @@ const TopCreators = () => {
     }
   }, [screenWidth]);
 
-  console.log(screenWidth);
-
   const HARCODED_DATA = [
     {
       icon: userIcon1,
@@ -111,7 +109,7 @@ const TopCreators = () => {
           <div className={styles.title}> Top creators </div>
           <div className={styles.subtitle}> Checkout Top Rated Creators on the NFT Marketplace</div>
         </div>
-        {!isMobile && <Button component={Rocket} title="View Rankings" outline={true} className={styles.test} />}
+        {!isMobile && <Button component={Rocket} title="View Rankings" outline={true} className={styles.button} />}
       </div>
 
       <div className={styles.cardsWrapper}>
@@ -129,7 +127,7 @@ const TopCreators = () => {
             </div>
           </div>
         ))}
-        {isMobile && <Button component={Rocket} title="View Rankings" outline={true} className={styles.test} />}
+        {isMobile && <Button component={Rocket} title="View Rankings" outline={true} className={styles.button} />}
       </div>
     </Container>
   );

@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
+
     .title {
       font-size: 1.75rem;
       font-weight: 700;
@@ -23,6 +24,7 @@
         font-size: 4.1875rem;
       }
     }
+
     .subtitle {
       font-size: 1rem;
       line-height: 1.625rem;
@@ -34,7 +36,8 @@
       }
     }
   }
-  .test {
+
+  .button {
     width: 100%;
     display: flex;
     align-self: flex-end;

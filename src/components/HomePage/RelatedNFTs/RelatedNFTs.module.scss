@@ -1,0 +1,60 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.headline {
+  color: $color-white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.75rem;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    .title {
+      font-size: 1.75rem;
+      font-weight: 700;
+
+      @include bp(sl) {
+        font-size: 2.375rem;
+      }
+
+      @include bp(xl) {
+        font-size: 4.1875rem;
+      }
+    }
+    .subtitle {
+      font-size: 1rem;
+      line-height: 1.625rem;
+
+      @include bp(xl) {
+        font-size: 1.375rem;
+        line-height: 160%;
+        font-weight: 300;
+      }
+    }
+  }
+  .button {
+    width: 100%;
+    display: flex;
+    align-self: flex-end;
+  }
+}
+
+.cards {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem 1.875rem;
+
+  @include bp(sl) {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 19.6875rem;
+  }
+}
