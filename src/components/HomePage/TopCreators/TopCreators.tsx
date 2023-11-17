@@ -14,7 +14,7 @@ import userIcon10 from '../../../assets/userIcons/user-icon-10.png';
 import userIcon11 from '../../../assets/userIcons/user-icon-11.png';
 import userIcon12 from '../../../assets/userIcons/user-icon-12.png';
 import Button from '../../../common/Button/Button';
-import { ReactComponent as Rocket } from '../../../assets/icons/rocketLaunch2.svg';
+import { ReactComponent as Rocket } from '../../../assets/buttonIcons/rocketLaunch.svg';
 
 const TopCreators = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
