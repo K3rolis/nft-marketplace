@@ -1,0 +1,58 @@
+@import '../../../../styles/mixins';
+@import '../../../../styles/variables';
+
+.card {
+  background-color: $background-secondary;
+  border-radius: 1.25rem;
+  display: flex;
+  padding: 1.25rem;
+  gap: 1.25rem;
+
+  @include bp(sl) {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .imageBox {
+    height: 5.1875rem;
+
+    @include bp(sl) {
+      height: 8.3125rem;
+    }
+
+    @include bp(xl) {
+      height: 13rem;
+    }
+
+    .cardImage {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+
+    .title {
+      font-size: 1rem;
+      font-weight: 600;
+
+      @include bp(xl) {
+        font-size: 1.375rem;
+      }
+    }
+
+    .description {
+      font-size: 0.75rem;
+      line-height: 140%;
+
+      @include bp(xl) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
