@@ -1,0 +1,66 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include bp(xl) {
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+  }
+
+  input {
+    padding: 0.75rem 1.25rem;
+    border-radius: 1.25rem;
+    border-color: transparent;
+    color: $color-black;
+    font-size: 1rem;
+
+    @include bp(xl) {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @include bp(xl) {
+      padding-block: 1.1875rem;
+      padding-right: 13.125rem;
+    }
+  }
+
+  button {
+    padding-block: 0.75rem;
+    text-align: center;
+    border-color: transparent;
+    outline: none;
+    border-radius: 1.25rem;
+    background-color: $color-purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: $color-white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+
+    @include bp(xl) {
+      flex-direction: row;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 12.5rem;
+      height: 100%;
+    }
+  }
+}

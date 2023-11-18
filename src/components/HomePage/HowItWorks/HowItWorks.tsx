@@ -6,6 +6,7 @@ import HowItWorksCard from './HowItWorksCard/HowItWorksCard';
 import image1 from '../../../assets/howitworks/howItWorks1.png';
 import image2 from '../../../assets/howitworks/howItWorks2.png';
 import image3 from '../../../assets/howitworks/howItWorks3.png';
+import HeadLine from '../../Utils/Headline/HeadLine';
 
 const HowItWorks = () => {
   const HARDCODED_DATA = [
@@ -27,10 +28,7 @@ const HowItWorks = () => {
   ];
   return (
     <Container>
-      <div className={styles.headline}>
-        <div className={styles.title}>How it works</div>
-        <div className={styles.subtitle}>Find out how to get started</div>
-      </div>
+      <HeadLine title={'How it works'} subtitle={'Find out how to get started'} />
 
       <div className={styles.cards}>
         {HARDCODED_DATA.map((data) => (

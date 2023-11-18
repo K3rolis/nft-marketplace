@@ -9,6 +9,7 @@ import shroomieIcon from '../../../assets/userIcons/user-icon-7.png';
 import robotIcon from '../../../assets/userIcons/user-icon-9.png';
 
 import Container from '../../../common/Container/Container';
+import HeadLine from '../../Utils/Headline/HeadLine';
 
 const NFTTrendingCollection = () => {
   const HARDCODED_DATA = [
@@ -39,10 +40,7 @@ const NFTTrendingCollection = () => {
   ];
   return (
     <Container className={styles.container}>
-      <div className={styles.headline}>
-        <div className={styles.title}> Trending Collection </div>
-        <div className={styles.subtitle}> Checkout our weekly updated trending collection.</div>
-      </div>
+      <HeadLine title={'Trending Collection'} subtitle={'Checkout our weekly updated trending collection.'} />
 
       <div className={styles.cardsWrapper}>
         {HARDCODED_DATA.map((data) => (

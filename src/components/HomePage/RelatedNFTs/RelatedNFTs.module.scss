@@ -14,14 +14,10 @@
 
     .title {
       font-size: 1.75rem;
-      font-weight: 700;
-
-      @include bp(sl) {
-        font-size: 2.375rem;
-      }
+      font-weight: 600;
 
       @include bp(xl) {
-        font-size: 4.1875rem;
+        font-size: 2.375rem;
       }
     }
     .subtitle {
@@ -31,7 +27,6 @@
       @include bp(xl) {
         font-size: 1.375rem;
         line-height: 160%;
-        font-weight: 300;
       }
     }
   }
