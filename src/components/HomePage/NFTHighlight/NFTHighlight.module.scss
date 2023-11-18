@@ -1,0 +1,134 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.backgroundImage {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .highlight {
+    width: 100%;
+    min-height: 36.875rem;
+    background-color: transparent;
+    background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, rgb(162, 89, 255) 100%);
+    position: relative;
+    height: 100%;
+
+    @include bp(sl) {
+      max-height: 40rem;
+    }
+
+    .content {
+      display: flex;
+      gap: 1.875rem;
+      flex-direction: column;
+      padding-block: 7.5rem 2.5rem;
+
+      @include bp(sl) {
+        display: grid;
+        grid-template-columns: 60%, 40%;
+        padding-block: 22.5rem 3.75rem;
+      }
+
+      @include bp(xl) {
+        padding-inline: 0rem;
+      }
+
+      .userBox {
+        display: flex;
+
+        @include bp(sl) {
+          align-self: start;
+          grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .user {
+          display: flex;
+          background-color: $background-color;
+          flex-grow: 0;
+          gap: 0.75rem;
+          padding: 0.625rem 1.25rem;
+          border-radius: 1.25rem;
+          align-items: center;
+
+          .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+          }
+          .username {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .title {
+        font-size: 2.375rem;
+        font-weight: 600;
+
+        @include bp(sl) {
+          align-self: start;
+          grid-area: 2 / 1 / 3 / 2;
+        }
+
+        @include bp(xl) {
+          font-size: 3.1875rem;
+        }
+      }
+
+      .auctionBox {
+        background-color: rgba($background-secondary, 0.5);
+        border-radius: 1.25rem;
+        padding: 1.875rem;
+        max-width: 15.9375rem;
+
+        @include bp(sl) {
+          align-self: end;
+          grid-area: 1 / 2 / 4 / 3;
+          width: 15.9375rem;
+          margin-left: auto;
+        }
+
+        .auctionTitle {
+          font-size: 0.75rem;
+          font-family: $font-space-mono;
+        }
+        .timerBox {
+          display: flex;
+          justify-content: space-between;
+
+          .durationBox {
+            .timeValue {
+              font-size: 2.375rem;
+              font-weight: 600;
+            }
+
+            .duration {
+              font-size: 0.75rem;
+              font-family: $font-space-mono;
+            }
+          }
+          .colon {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-top: 0.3125rem;
+          }
+        }
+      }
+
+      .button {
+        background-color: white;
+        color: black;
+        border-color: white;
+        font-weight: 600;
+        max-width: 19.6875rem;
+
+        @include bp(sl) {
+          align-self: start;
+          grid-area: 3 / 1 / 4 / 2;
+          max-width: 12.5rem;
+        }
+      }
+    }
+  }
+}

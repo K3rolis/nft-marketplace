@@ -4,6 +4,7 @@ import NFTTrendingCollection from '../../components/HomePage/NFTTrendingCollecti
 import TopCreators from '../../components/HomePage/TopCreators/TopCreators';
 import Categories from '../../components/HomePage/Categories/Categories';
 import RelatedNFTs from '../../components/HomePage/RelatedNFTs/RelatedNFTs';
+import NFTHighlight from '../../components/HomePage/NFTHighlight/NFTHighlight';
 
 export const HomePage = () => {
   return (
@@ -12,7 +13,8 @@ export const HomePage = () => {
       {/* <NFTTrendingCollection /> */}
       {/* <TopCreators /> */}
       {/* <Categories /> */}
-      <RelatedNFTs />
+      {/* <RelatedNFTs /> */}
+      <NFTHighlight />
     </>
   );
 };
