@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Headline.module.scss';
+import styles from './HeadLine.module.scss';
 
 type Props = {
   title: string;

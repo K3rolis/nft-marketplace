@@ -40,7 +40,7 @@ const NFTTrendingCollection = () => {
   ];
   return (
     <Container className={styles.container}>
-      <HeadLine title={'Trending Collection'} subtitle={'Checkout our weekly updated trending collection.'} />
+      <HeadLine title="Trending Collection" subtitle="Checkout our weekly updated trending collection." />
 
       <div className={styles.cardsWrapper}>
         {HARDCODED_DATA.map((data, index) => (

@@ -28,7 +28,7 @@ const HowItWorks = () => {
   ];
   return (
     <Container>
-      <HeadLine title={'How it works'} subtitle={'Find out how to get started'} />
+      <HeadLine title='How it works' subtitle='Find out how to get started' />
 
       <div className={styles.cards}>
         {HARDCODED_DATA.map((data, index) => (
