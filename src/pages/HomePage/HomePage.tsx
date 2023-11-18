@@ -12,13 +12,13 @@ import SubscribeWidget from '../../components/HomePage/SubscribeWidget/Subscribe
 export const HomePage = () => {
   return (
     <div className={styles.container}>
-      {/* <HeroSection /> */}
-      {/* <NFTTrendingCollection /> */}
-      {/* <TopCreators /> */}
-      {/* <Categories /> */}
-      {/* <RelatedNFTs /> */}
-      {/* <NFTHighlight /> */}
-      {/* <HowItWorks /> */}
+      <HeroSection />
+      <NFTTrendingCollection />
+      <TopCreators />
+      <Categories />
+      <RelatedNFTs />
+      <NFTHighlight />
+      <HowItWorks />
       <SubscribeWidget />
     </div>
   );

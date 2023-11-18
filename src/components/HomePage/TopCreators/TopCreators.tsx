@@ -114,7 +114,7 @@ const TopCreators = () => {
 
       <div className={styles.cardsWrapper}>
         {HARCODED_DATA.map((data, index) => (
-          <div className={styles.card}>
+          <div className={styles.card} key={index}>
             <div className={styles.imageBox}>
               <img src={data.icon} alt={data.name} />
               <span className={styles.imageIndex}>{++index}</span>

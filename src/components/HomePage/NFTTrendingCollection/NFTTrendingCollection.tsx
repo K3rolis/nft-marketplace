@@ -43,8 +43,8 @@ const NFTTrendingCollection = () => {
       <HeadLine title={'Trending Collection'} subtitle={'Checkout our weekly updated trending collection.'} />
 
       <div className={styles.cardsWrapper}>
-        {HARDCODED_DATA.map((data) => (
-          <div className={styles.card}>
+        {HARDCODED_DATA.map((data, index) => (
+          <div className={styles.card} key={index}>
             <div className={styles.mainImage}>
               <img src={data.primaryImage} alt="" className={styles.primaryImage} />
             </div>

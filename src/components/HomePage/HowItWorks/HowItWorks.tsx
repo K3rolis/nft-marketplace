@@ -31,8 +31,8 @@ const HowItWorks = () => {
       <HeadLine title={'How it works'} subtitle={'Find out how to get started'} />
 
       <div className={styles.cards}>
-        {HARDCODED_DATA.map((data) => (
-          <HowItWorksCard {...data} />
+        {HARDCODED_DATA.map((data, index) => (
+          <HowItWorksCard {...data} key={index} />
         ))}
       </div>
     </Container>

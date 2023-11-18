@@ -77,8 +77,8 @@ const RelatedNFTs = () => {
       </div>
 
       <div className={styles.cards}>
-        {HARCODED_DATA.map((data) => (
-          <NFTCard {...data} />
+        {HARCODED_DATA.map((data, index) => (
+          <NFTCard {...data} key={index} />
         ))}
         {isMobile && <Button component={eyeIcon} title="See all" outline={true} className={styles.button} />}
       </div>

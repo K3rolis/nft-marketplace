@@ -38,8 +38,8 @@ const Categories = () => {
       <div className={styles.title}>Browse Categories</div>
       <HeadLine title={'Browse Categories'} />
       <div className={styles.categories}>
-        {HARCODED_DATA.map((data) => (
-          <CategoryCard {...data} />
+        {HARCODED_DATA.map((data, index) => (
+          <CategoryCard {...data} key={index} />
         ))}
       </div>
     </Container>
