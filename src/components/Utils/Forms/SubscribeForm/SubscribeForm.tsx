@@ -12,9 +12,9 @@ const SubscribeForm = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className={styles.subscribeForm}>
       <input type="email" className={styles.input} value={email} placeholder="Enter Your Email Address" id="email" onChange={(e) => setEmail(e.target.value)} required />
-      <button>
+      <button type="submit">
         <img src={icon} alt="letter icon" /> <span>Subscribe</span>
       </button>
     </form>

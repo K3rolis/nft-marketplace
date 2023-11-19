@@ -2,22 +2,16 @@
 @import '../../../styles/mixins';
 
 .container {
-  margin: auto;
-  max-width: 64.375rem;
-  color: $color-white;
   display: grid;
-  gap: 2.5rem;
   margin-top: 2.5rem;
-  padding-inline: 1.875rem;
 
   @include bp(sl) {
-    grid-template-rows: repeat(2, max-content);
     grid-template-columns: repeat(2, 1fr);
-    padding-inline: 4.5rem;
+    margin-top: 5rem;
   }
 
   @include bp(xl) {
-    gap: 1.25rem;
+    gap: 2.5rem;
   }
 
   .headline {

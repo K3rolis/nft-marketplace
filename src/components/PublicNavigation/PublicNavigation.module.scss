@@ -2,17 +2,12 @@
 @import '../../styles/variables';
 
 .container {
-  max-width: 1280px;
+  max-width: 80rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  padding: 15px 30px;
-  margin-bottom: 2.5rem;
-
-  @include bp(sl) {
-    margin-bottom: 5rem;
-  }
+  padding: 0.9375rem 1.875rem;
 
   .logoBox {
     display: flex;

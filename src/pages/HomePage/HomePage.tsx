@@ -9,7 +9,7 @@ import HowItWorks from '../../components/HomePage/HowItWorks/HowItWorks';
 import styles from './HomePage.module.scss';
 import SubscribeWidget from '../../components/HomePage/SubscribeWidget/SubscribeWidget';
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <div className={styles.container}>
       <HeroSection />
@@ -23,3 +23,5 @@ export const HomePage = () => {
     </div>
   );
 };
+
+export default HomePage;
