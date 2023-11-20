@@ -28,18 +28,18 @@ const HeroSection = () => {
       <Button title="Get Started" component={rocketIcon} />
       <div className={styles.additionalDataBox}>
         <div className={styles.additionalData}>
-          <div className={styles.title}> 240k+</div>
-          <div className={styles.subtitle}>Total Sale</div>
+          <div className={styles.title}> 250k+</div>
+          <div className={styles.subtitle}>Volume</div>
         </div>
 
         <div className={styles.additionalData}>
-          <div className={styles.title}> 100k+</div>
-          <div className={styles.subtitle}>Auctions</div>
+          <div className={styles.title}> 50+</div>
+          <div className={styles.subtitle}>NFTs Sold</div>
         </div>
 
         <div className={styles.additionalData}>
-          <div className={styles.title}> 240k+</div>
-          <div className={styles.subtitle}>Artists</div>
+          <div className={styles.title}> 3000+</div>
+          <div className={styles.subtitle}>Followers</div>
         </div>
       </div>
     </Container>

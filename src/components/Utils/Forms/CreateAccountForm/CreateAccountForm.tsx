@@ -24,17 +24,17 @@ const CreateAccountForm = () => {
 
             <div className={styles.inputBox}>
               <img src={icon2} alt="envelopeSimple" />
-              <input type="text" placeholder="Email Address" />
+              <input type="email" placeholder="Email Address" />
             </div>
 
             <div className={styles.inputBox}>
               <img src={icon3} alt="lockKey" />
-              <input type="text" placeholder="Password" />
+              <input type="password" placeholder="Password" />
             </div>
 
             <div className={styles.inputBox}>
               <img src={icon3} alt="lockKey" />
-              <input type="text" placeholder="Confirm Password" />
+              <input type="password" placeholder="Confirm Password" />
             </div>
           </div>
 

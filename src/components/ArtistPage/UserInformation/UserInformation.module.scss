@@ -1,0 +1,180 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.profile {
+  .coverProfileWrapper {
+    position: relative;
+    margin-bottom: 5rem;
+
+    .coverProfile {
+      min-height: 15.625rem;
+      max-height: 20rem;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .coverDecoration {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, rgb(162, 89, 255) 100%);
+    }
+  }
+
+  .imageBox {
+    position: relative;
+
+    .icon {
+      position: absolute;
+      border: 0.1875rem solid $background-secondary;
+      border-radius: 1.25rem;
+      top: -9.0625rem;
+      height: 7.5rem;
+      width: 7.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include bp(sl) {
+        left: 0;
+        transform: translateX(0%);
+      }
+    }
+  }
+
+  .profileInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    @include bp(sl) {
+      display: grid;
+    }
+
+    .username {
+      font-size: 1.75rem;
+      font-weight: 600;
+
+      @include bp(xl) {
+        grid-area: 1 / 1 / 2 / 2;
+        font-size: 2.375rem;
+      }
+
+      @include bp(xl) {
+        font-size: 3.1875rem;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      @include bp(sl) {
+        flex-direction: row;
+        font-size: 1.375rem;
+      }
+
+      @include bp(xl) {
+        grid-area: 1 / 2 / 5 / 3;
+      }
+
+      .button {
+        min-width: 11.25rem;
+      }
+    }
+
+    .additionalDataBox {
+      display: flex;
+      gap: 1.875rem;
+
+      @include bp(xl) {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+
+      .additionalData {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          font-family: $font-space-mono;
+          font-weight: 700;
+          font-size: 1.375rem;
+        }
+
+        .subtitle {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .aboutBox {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      font-size: 1rem;
+
+      @include bp(xl) {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+
+      @include bp(xl) {
+        font-size: 1.375rem;
+      }
+
+      .title {
+        color: $color-light-gray;
+        font-family: $font-space-mono;
+      }
+
+      .description {
+        color: $color-white;
+      }
+    }
+
+    .socialLinksBox {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      font-size: 1rem;
+
+      @include bp(xl) {
+        grid-area: 4 / 1 / 5 / 2;
+      }
+
+      @include bp(xl) {
+        font-size: 1.375rem;
+      }
+
+      .title {
+        color: $color-light-gray;
+        font-family: $font-space-mono;
+      }
+      .socialLinks {
+        display: flex;
+        gap: 0.625rem;
+
+        .socialLink {
+          height: 1.5rem;
+          width: 1.5rem;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          @include bp(xl) {
+            height: 2rem;
+            width: 2rem;
+          }
+
+          &:hover {
+            transform: scale(1.1);
+            filter: brightness(1.5);
+          }
+        }
+      }
+    }
+  }
+}
