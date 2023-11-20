@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './NFTCard.module.scss';
 
-type Props = {
+export type NFTCardProps = {
   nftImage: string;
   nftTitle: string;
   userIcon: string;
@@ -10,7 +10,7 @@ type Props = {
   highestBid: string;
 };
 
-const NFTCard = ({ nftImage, nftTitle, userIcon, userName, price, highestBid }: Props) => {
+const NFTCard = ({ nftImage, nftTitle, userIcon, userName, price, highestBid }: NFTCardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageBox}>
