@@ -165,15 +165,13 @@ const UserNFTs = () => {
 
       <div className={styles.contentTabs}>
         {toggledTab === 0 && (
-          <div className={styles.content}>
-            <div className={styles.content}>{HARDCODED_DATA_CREATED.length ? HARDCODED_DATA_CREATED.map((data, index) => <NFTCard {...data} key={index} />) : <div>Results not found</div>}</div>
-          </div>
+          <div className={styles.content}>{HARDCODED_DATA_CREATED.length ? HARDCODED_DATA_CREATED.map((data, index) => <NFTCard {...data} key={index} />) : <div>Results not found</div>}</div>
         )}
+
         {toggledTab === 1 && (
-          <div className={styles.content}>
-            <div className={styles.content}>{HARDCODED_DATA_OWNED.length ? HARDCODED_DATA_OWNED.map((data, index) => <NFTCard {...data} key={index} />) : <div>Results not found</div>}</div>
-          </div>
+          <div className={styles.content}>{HARDCODED_DATA_OWNED.length ? HARDCODED_DATA_OWNED.map((data, index) => <NFTCard {...data} key={index} />) : <div>Results not found</div>}</div>
         )}
+
         {toggledTab === 2 && (
           <div className={styles.content}>{HARDCODED_DATA_COLLECTION.length ? HARDCODED_DATA_COLLECTION.map((data, index) => <NFTCard {...data} key={index} />) : <div>Results not found</div>}</div>
         )}

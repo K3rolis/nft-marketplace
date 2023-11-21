@@ -8,6 +8,7 @@ const HomePage = React.lazy(() => import('../pages/HomePage/HomePage'));
 const SignUpPage = React.lazy(() => import('../pages/CreateAccount/CreateAccount'));
 const ArtistPage = React.lazy(() => import('../pages/ArtistPage/ArtistPage'));
 const NFTPage = React.lazy(() => import('../pages/NFTPage/NFTPage'));
+const MarketplacePage = React.lazy(() => import('../pages/MarketplacePage/MarketplacePage'));
 
 const Router = () => {
   const getRoutes = () => {
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path={routes.signup} element={<SignUpPage />} />
         <Route path={routes.artist} element={<ArtistPage />} />
         <Route path={routes.nftpage} element={<NFTPage />} />
+        <Route path={routes.marketplace} element={<MarketplacePage />} />
       </>
     );
   };

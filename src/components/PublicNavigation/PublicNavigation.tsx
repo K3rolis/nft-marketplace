@@ -22,7 +22,9 @@ const PublicNavigation = () => {
       </div>
       <div className={styles.navigationLinks}>
         <ul>
-          <li>Marketplace</li>
+          <li>
+            <Link to={routes.marketplace}>Marketplace</Link>
+          </li>
           <li>Rankings</li>
           <li>Connect a wallet</li>
           <li>
