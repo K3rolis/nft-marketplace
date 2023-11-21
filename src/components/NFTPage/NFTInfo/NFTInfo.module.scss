@@ -1,0 +1,249 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.nftInfo {
+  .primaryImage {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-height: 35rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .nftContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    @include bp(sl) {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      column-gap: 3.125rem;
+    }
+
+    .headline {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      position: relative;
+
+      @include bp(sl) {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      .title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: $color-white;
+
+        @include bp(sl) {
+          font-size: 2.375rem;
+        }
+
+        @include bp(xl) {
+          font-size: 3.1875rem;
+        }
+      }
+
+      .subtitle {
+        font-size: 1rem;
+        color: $color-light-gray;
+
+        @include bp(xl) {
+          font-size: 1.375rem;
+        }
+      }
+    }
+
+    .auctionBox {
+      background-color: rgba($background-secondary, 0.5);
+      border-radius: 1.25rem;
+      padding: 1.875rem;
+      max-width: 15.9375rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.875rem;
+
+      @include bp(sl) {
+        display: grid;
+        grid-area: 1 / 2 / 6 / 3;
+        align-self: flex-start;
+        justify-self: flex-end;
+        width: 100%;
+      }
+
+      .auctionTitle {
+        font-size: 0.75rem;
+        font-family: $font-space-mono;
+      }
+      .timerBox {
+        display: flex;
+        justify-content: space-between;
+
+        .durationBox {
+          .timeValue {
+            font-size: 2.375rem;
+            font-weight: 600;
+          }
+
+          .duration {
+            font-size: 0.75rem;
+            font-family: $font-space-mono;
+          }
+        }
+        .colon {
+          font-size: 1.75rem;
+          font-weight: 600;
+          margin-top: 0.3125rem;
+        }
+      }
+    }
+
+    .author {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+
+      @include bp(sl) {
+        grid-area: 2 / 1 / 3 / 2;
+        align-self: flex-start;
+      }
+
+      .title {
+        color: $color-light-gray;
+        font-family: $font-space-mono;
+        font-size: 1rem;
+
+        @include bp(xl) {
+          font-size: 1.375rem;
+        }
+      }
+      .user {
+        display: flex;
+        gap: 0.75rem;
+
+        .icon {
+          border-radius: 50%;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        .username {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .descriptionWrapper {
+      display: flex;
+      gap: 0.625rem;
+      flex-direction: column;
+
+      @include bp(sl) {
+        grid-area: 3 / 1 / 4 / 2;
+        align-self: flex-start;
+      }
+
+      .title {
+        color: $color-light-gray;
+        font-family: $font-space-mono;
+        font-size: 1rem;
+
+        @include bp(xl) {
+          font-size: 1.375rem;
+        }
+      }
+      .description {
+        font-size: 1rem;
+        color: $color-white;
+        line-height: 160%;
+
+        @include bp(xl) {
+          font-size: 1.375rem;
+        }
+      }
+    }
+
+    .detailsWrapper {
+      display: flex;
+      gap: 0.625rem;
+      flex-direction: column;
+
+      @include bp(sl) {
+        grid-area: 4 / 1 / 5 / 2;
+        align-self: flex-start;
+      }
+
+      .title {
+        color: $color-light-gray;
+        font-family: $font-space-mono;
+        font-size: 1rem;
+
+        @include bp(xl) {
+          font-size: 1.375rem;
+        }
+      }
+      .webLinks {
+        display: flex;
+        gap: 0.625rem;
+        align-items: center;
+
+        .icon {
+          width: 1.5rem;
+          height: 1.5rem;
+
+          @include bp(xl) {
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+        .webLink {
+          @include bp(xl) {
+            font-size: 1.375rem;
+          }
+        }
+      }
+    }
+
+    .tagsWrapper {
+      display: flex;
+      gap: 0.625rem;
+      flex-direction: column;
+
+      @include bp(sl) {
+        grid-area: 5 / 1 / 6 / 2;
+        align-self: flex-start;
+      }
+
+      .title {
+        color: $color-light-gray;
+        font-family: $font-space-mono;
+        font-size: 1rem;
+
+        @include bp(xl) {
+          font-size: 1.375rem;
+        }
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        @include bp(xl) {
+          flex-direction: row;
+        }
+
+        .tag {
+          align-self: flex-start;
+          padding: 0.75rem 1.875rem;
+          background-color: $background-secondary;
+          text-transform: uppercase;
+          border-radius: 1.25rem;
+          font-weight: 600;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
