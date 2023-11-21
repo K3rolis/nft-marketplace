@@ -1,0 +1,55 @@
+@import '../../../styles/mixins';
+
+.headline {
+  display: flex;
+  justify-content: center;
+  margin-block: 5rem 1.875rem;
+
+  @include bp(sl) {
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    @include bp(xl) {
+      font-size: 2.375rem;
+    }
+  }
+
+  .tabletButton {
+    display: none;
+
+    @include bp(sl) {
+      display: block;
+    }
+    .button {
+      min-width: 16.875rem;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.mobileButtonBox {
+  display: flex;
+  justify-content: center;
+
+  @include bp(sl) {
+    display: none;
+  }
+  .mobileButton {
+    max-width: 19.6875rem;
+    width: 100%;
+  }
+}
