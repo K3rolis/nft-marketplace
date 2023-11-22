@@ -4,4 +4,5 @@ export const routes = {
   artist: '/artist',
   nftpage: '/nft',
   marketplace: '/marketplace',
+  rankings: '/rankings',
 };

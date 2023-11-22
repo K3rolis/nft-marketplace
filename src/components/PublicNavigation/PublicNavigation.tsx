@@ -25,7 +25,9 @@ const PublicNavigation = () => {
           <li>
             <Link to={routes.marketplace}>Marketplace</Link>
           </li>
-          <li>Rankings</li>
+          <li>
+            <Link to={routes.rankings}>Rankings</Link>
+          </li>
           <li>Connect a wallet</li>
           <li>
             <Link to={routes.signup}>

@@ -1,0 +1,119 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.card {
+  display: flex;
+  border-radius: 1.25rem;
+  padding: 0.75rem 1.25rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-secondary;
+
+  @include bp(sl) {
+    padding-block: 0.9375rem;
+  }
+
+  .artistRank {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+
+    .index {
+      color: $color-light-gray;
+
+      @include bp(xl) {
+        background-color: $background-primary;
+        border-radius: 50%;
+        padding: 0.25rem 0.625rem;
+      }
+    }
+
+    .artist {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: $color-white;
+
+      .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+
+        @include bp(xl) {
+          width: 3.75rem;
+          height: 3.75rem;
+        }
+      }
+
+      .user {
+        max-width: 5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 1rem;
+
+        @include bp(xs) {
+          max-width: 9.375rem;
+        }
+
+        @include bp(sl) {
+          font-size: 1.375rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .artistStats {
+    display: flex;
+    gap: 1.25rem;
+    color: $color-white;
+    font-family: $font-space-mono;
+    font-size: 0.875rem;
+
+    .change {
+      display: none;
+
+      @include bp(sl) {
+        display: block;
+        width: 6.25rem;
+      }
+
+      @include bp(xl) {
+        width: 10rem;
+      }
+    }
+
+    .sold {
+      display: none;
+      @include bp(xl) {
+        display: block;
+        width: 10rem;
+      }
+    }
+
+    .volume {
+      width: 6.25rem;
+
+      @include bp(xl) {
+        width: 10rem;
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 1.875rem;
+}
+
+.positive {
+  color: $color-green;
+}
+.negative {
+  color: $color-red;
+}
