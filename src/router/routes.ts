@@ -5,4 +5,5 @@ export const routes = {
   nftpage: '/nft',
   marketplace: '/marketplace',
   rankings: '/rankings',
+  connectWallet: 'connect-a-wallet',
 };

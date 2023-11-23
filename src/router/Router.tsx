@@ -10,6 +10,7 @@ const ArtistPage = React.lazy(() => import('../pages/ArtistPage/ArtistPage'));
 const NFTPage = React.lazy(() => import('../pages/NFTPage/NFTPage'));
 const MarketplacePage = React.lazy(() => import('../pages/MarketplacePage/MarketplacePage'));
 const RankingsPage = React.lazy(() => import('../pages/RankingsPage/RankingsPage'));
+const ConnectWalletPage = React.lazy(() => import('../pages/ConnectWalletPage/ConnectWalletPage'));
 
 const Router = () => {
   const getRoutes = () => {
@@ -21,6 +22,7 @@ const Router = () => {
         <Route path={routes.nftpage} element={<NFTPage />} />
         <Route path={routes.marketplace} element={<MarketplacePage />} />
         <Route path={routes.rankings} element={<RankingsPage />} />
+        <Route path={routes.connectWallet} element={<ConnectWalletPage />} />
       </>
     );
   };

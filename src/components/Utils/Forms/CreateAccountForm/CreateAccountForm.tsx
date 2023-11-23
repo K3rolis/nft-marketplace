@@ -16,8 +16,6 @@ const CreateAccountForm = () => {
     confirmPassword: '',
   });
 
-  console.log(inputs);
-
   const onSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (inputs.username.length > 0 && inputs.email.length > 0 && inputs.password.length > 0 && inputs.confirmPassword.length > 0) {

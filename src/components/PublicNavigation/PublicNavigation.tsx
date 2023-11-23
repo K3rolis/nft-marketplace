@@ -28,7 +28,9 @@ const PublicNavigation = () => {
           <li>
             <Link to={routes.rankings}>Rankings</Link>
           </li>
-          <li>Connect a wallet</li>
+          <li>
+            <Link to={routes.connectWallet}>Connect a wallet</Link>
+          </li>
           <li>
             <Link to={routes.signup}>
               <Button title={'Sign up'} component={profileIcon}></Button>
