@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './PublicNavigation.module.scss';
 import logoImage from '../../assets/icons/logo.svg';
 import Button from '../../common/Button/Button';
@@ -7,6 +7,8 @@ import { routes } from '../../router/routes';
 import { Link } from 'react-router-dom';
 
 const PublicNavigation = () => {
+  const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+
   return (
     <div className={styles.container}>
       <Link to={routes.homepage}>
@@ -15,11 +17,34 @@ const PublicNavigation = () => {
           <div className={styles.logoText}>NFT Marketplace</div>
         </div>
       </Link>
-      <div className={styles.hamburger}>
+      <div className={`${mobileMenu ? styles.toggledHamburger : styles.hamburger}`} onClick={() => setMobileMenu(!mobileMenu)}>
         <div className={styles.burger}></div>
         <div className={`${styles.burger} ${styles.burgerLong}`}></div>
         <div className={styles.burger}></div>
       </div>
+
+      {mobileMenu && (
+        <div className={styles.mobileMenu}>
+          <div className={styles.mobileMenuLinks}>
+            <Link to={routes.homepage} onClick={() => setMobileMenu(!mobileMenu)}>
+              Home
+            </Link>
+            <Link to={routes.marketplace} onClick={() => setMobileMenu(!mobileMenu)}>
+              Marketplace
+            </Link>
+            <Link to={routes.rankings} onClick={() => setMobileMenu(!mobileMenu)}>
+              Rankings
+            </Link>
+            <Link to={routes.connectWallet} onClick={() => setMobileMenu(!mobileMenu)}>
+              Connect a wallet
+            </Link>
+            <Link to={routes.signup} onClick={() => setMobileMenu(!mobileMenu)}>
+              <Button title="Sign Up" component={profileIcon}></Button>
+            </Link>
+          </div>
+        </div>
+      )}
+
       <div className={styles.navigationLinks}>
         <ul>
           <li>
