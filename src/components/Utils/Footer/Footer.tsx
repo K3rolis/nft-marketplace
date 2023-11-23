@@ -9,6 +9,8 @@ import discordIcon from '../../../assets/social/discord.svg';
 import youtubeIcon from '../../../assets/social/youtube.svg';
 import twitterIcon from '../../../assets/social/twitter.svg';
 import instagramIcon from '../../../assets/social/instagram.svg';
+import { Link } from 'react-router-dom';
+import { routes } from '../../../router/routes';
 
 const SOCIAL_LINKS = [
   { image: discordIcon, title: 'discord', url: 'https://discord.com/' },
@@ -42,9 +44,15 @@ const Footer = () => {
           <div className={styles.exploreLinks}>
             <div className={styles.title}>Explore</div>
             <ul>
-              <li>Marketplace</li>
-              <li>Rankings</li>
-              <li>Connect a wallet</li>
+              <li>
+                <Link to={routes.marketplace}>Marketplace</Link>
+              </li>
+              <li>
+                <Link to={routes.rankings}>Rankings</Link>
+              </li>
+              <li>
+                <Link to={routes.connectWallet}>Connect a wallet</Link>
+              </li>
             </ul>
           </div>
 

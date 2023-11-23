@@ -15,6 +15,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
+  justify-content: center;
 
   @include bp(sl) {
     gap: 1.875rem;

@@ -7,6 +7,8 @@ import userIcon from '../../../assets/userIcons/user-icon-10.png';
 import Button from '../../../common/Button/Button';
 
 import { ReactComponent as buttonIcon } from '../../../assets/buttonIcons/Eye.svg';
+import { Link } from 'react-router-dom';
+import { routes } from '../../../router/routes';
 
 const NFTHighlight = () => {
   const [initialTime, setInitialTime] = useState<number>(86400);
@@ -62,7 +64,9 @@ const NFTHighlight = () => {
                 </div>
               </div>
             </div>
-            <Button title={'See NFT'} outline={true} component={buttonIcon} className={styles.button} />
+            <Link to={routes.nftpage}>
+              <Button title={'See NFT'} outline={true} component={buttonIcon} className={styles.button} />
+            </Link>
           </div>
         </Container>
       </div>

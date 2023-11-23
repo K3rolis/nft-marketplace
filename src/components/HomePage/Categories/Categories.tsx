@@ -21,6 +21,8 @@ import categoryIcon6 from '../../../assets/categories/icons/category-6.svg';
 import categoryIcon7 from '../../../assets/categories/icons/category-7.svg';
 import categoryIcon8 from '../../../assets/categories/icons/category-8.svg';
 import HeadLine from '../../Utils/Headline/HeadLine';
+import { Link } from 'react-router-dom';
+import { routes } from '../../../router/routes';
 
 const Categories = () => {
   const HARCODED_DATA = [
@@ -38,7 +40,9 @@ const Categories = () => {
       <HeadLine title="Browse Categories" />
       <div className={styles.categories}>
         {HARCODED_DATA.map((data, index) => (
-          <CategoryCard {...data} key={index} />
+          <Link to={routes.marketplace}>
+            <CategoryCard {...data} key={index} />
+          </Link>
         ))}
       </div>
     </Container>

@@ -10,6 +10,8 @@ import robotIcon from '../../../assets/userIcons/user-icon-9.png';
 
 import Container from '../../../common/Container/Container';
 import HeadLine from '../../Utils/Headline/HeadLine';
+import { Link } from 'react-router-dom';
+import { routes } from '../../../router/routes';
 
 const NFTTrendingCollection = () => {
   const HARDCODED_DATA = [
@@ -45,20 +47,30 @@ const NFTTrendingCollection = () => {
       <div className={styles.cardsWrapper}>
         {HARDCODED_DATA.map((data, index) => (
           <div className={styles.card} key={index}>
-            <div className={styles.mainImage}>
-              <img src={data.primaryImage} alt="" className={styles.primaryImage} />
-            </div>
+            <Link to={routes.nftpage}>
+              <div className={styles.mainImage}>
+                <img src={data.primaryImage} alt="" className={styles.primaryImage} />
+              </div>
+            </Link>
 
             <div className={styles.innerContainer}>
-              <div className={styles.imageBox}>
-                <img src={data.innerFirstImage} alt="" className={styles.innerImage} />
-              </div>
-              <div className={styles.imageBox}>
-                <img src={data.innerSecondaryImage} alt="" className={styles.innerImage} />
-              </div>
-              <div className={styles.imageBox}>
-                <img src={data.innerSecondaryImage} alt="" className={styles.innerImage} />
-              </div>
+              <Link to={routes.nftpage}>
+                <div className={styles.imageBox}>
+                  <img src={data.innerFirstImage} alt="" className={styles.innerImage} />
+                </div>
+              </Link>
+
+              <Link to={routes.nftpage}>
+                <div className={styles.imageBox}>
+                  <img src={data.innerSecondaryImage} alt="" className={styles.innerImage} />
+                </div>
+              </Link>
+
+              <Link to={routes.nftpage}>
+                <div className={styles.imageBox}>
+                  <img src={data.innerSecondaryImage} alt="" className={styles.innerImage} />
+                </div>
+              </Link>
             </div>
 
             <div className={styles.cardContent}>

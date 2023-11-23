@@ -14,6 +14,8 @@ import userIcon3 from '../../../assets/userIcons/user-icon-3.png';
 import Button from '../../../common/Button/Button';
 
 import { ReactComponent as eyeIcon } from '../../../assets/buttonIcons/Eye.svg';
+import { Link } from 'react-router-dom';
+import { routes } from '../../../router/routes';
 
 const RelatedNFTs = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -73,14 +75,24 @@ const RelatedNFTs = () => {
           <div className={styles.title}> Discover More NFTs </div>
           <div className={styles.subtitle}> Explore new trending NFTs</div>
         </div>
-        {!isMobile && <Button component={eyeIcon} title="See all" outline={true} className={styles.button} />}
+        {!isMobile && (
+          <Link to={routes.marketplace}>
+            <Button component={eyeIcon} title="See all" outline={true} className={styles.button} />
+          </Link>
+        )}
       </div>
 
       <div className={styles.cards}>
         {HARCODED_DATA.map((data, index) => (
-          <NFTCard {...data} key={index} />
+          <Link to={routes.nftpage}>
+            <NFTCard {...data} key={index} />
+          </Link>
         ))}
-        {isMobile && <Button component={eyeIcon} title="See all" outline={true} className={styles.button} />}
+        {isMobile && (
+          <Link to={routes.marketplace}>
+            <Button component={eyeIcon} title="See all" outline={true} className={styles.button} />
+          </Link>
+        )}
       </div>
     </Container>
   );

@@ -1,12 +1,16 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
 
-
-
 .card {
   max-width: 19.6875rem;
   background-color: $background-secondary;
   border-radius: 1.25rem;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(0.9);
+  }
 
   @include bp(sl) {
     max-width: 20.625rem;

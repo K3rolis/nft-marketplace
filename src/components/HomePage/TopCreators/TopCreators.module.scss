@@ -32,7 +32,7 @@
   }
 
   .button {
-    width: 100%;
+    width: 320px;
     display: flex;
     align-self: flex-end;
   }
@@ -47,6 +47,8 @@
     flex-direction: row;
     column-gap: 1.875rem;
     flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
   }
 
   .card {
@@ -55,9 +57,11 @@
     border-radius: 1.25rem;
     display: flex;
     gap: 0.9375rem;
+    transition: all 0.5s;
+    cursor: pointer;
 
-    @include bp(sl) {
-      width: calc(50% - 3.4375rem);
+    &:hover {
+      transform: scale(0.9);
     }
 
     @include bp(xl) {

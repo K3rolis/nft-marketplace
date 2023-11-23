@@ -15,6 +15,8 @@ import userIcon11 from '../../../assets/userIcons/user-icon-11.png';
 import userIcon12 from '../../../assets/userIcons/user-icon-12.png';
 import Button from '../../../common/Button/Button';
 import { ReactComponent as Rocket } from '../../../assets/buttonIcons/rocketLaunch.svg';
+import { Link } from 'react-router-dom';
+import { routes } from '../../../router/routes';
 
 const TopCreators = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -109,25 +111,36 @@ const TopCreators = () => {
           <div className={styles.title}> Top creators </div>
           <div className={styles.subtitle}> Checkout Top Rated Creators on the NFT Marketplace</div>
         </div>
-        {!isMobile && <Button component={Rocket} title="View Rankings" outline={true} className={styles.button} />}
+
+        {!isMobile && (
+          <Link to={routes.rankings}>
+            <Button component={Rocket} title="View Rankings" outline={true} className={styles.button} />
+          </Link>
+        )}
       </div>
 
       <div className={styles.cardsWrapper}>
         {HARCODED_DATA.map((data, index) => (
-          <div className={styles.card} key={index}>
-            <div className={styles.imageBox}>
-              <img src={data.icon} alt={data.name} />
-              <span className={styles.imageIndex}>{++index}</span>
-            </div>
-            <div className={styles.additionalData}>
-              <div className={styles.userName}>{data.name}</div>
-              <div className={styles.totalSales}>
-                <span className={styles.highlight}>Total Sales:</span> {data.value}
+          <Link to={routes.artist} key={index}>
+            <div className={styles.card}>
+              <div className={styles.imageBox}>
+                <img src={data.icon} alt={data.name} />
+                <span className={styles.imageIndex}>{++index}</span>
+              </div>
+              <div className={styles.additionalData}>
+                <div className={styles.userName}>{data.name}</div>
+                <div className={styles.totalSales}>
+                  <span className={styles.highlight}>Total Sales:</span> {data.value}
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
-        {isMobile && <Button component={Rocket} title="View Rankings" outline={true} className={styles.button} />}
+        {isMobile && (
+          <Link to={routes.rankings}>
+            <Button component={Rocket} title="View Rankings" outline={true} className={styles.button} />
+          </Link>
+        )}
       </div>
     </Container>
   );

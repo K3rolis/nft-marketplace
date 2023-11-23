@@ -5,6 +5,8 @@ import heroIcon from '../../../assets/icons/heroSectionIcon.png';
 import { ReactComponent as rocketIcon } from '../../../assets/buttonIcons/rocketLaunch.svg';
 import Container from '../../../common/Container/Container';
 import Button from '../../../common/Button/Button';
+import { Link } from 'react-router-dom';
+import { routes } from '../../../router/routes';
 
 const HeroSection = () => {
   return (
@@ -25,7 +27,9 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <Button title="Get Started" component={rocketIcon} />
+      <Link to={routes.signup}>
+        <Button title="Get Started" component={rocketIcon} />
+      </Link>
       <div className={styles.additionalDataBox}>
         <div className={styles.additionalData}>
           <div className={styles.title}> 250k+</div>

@@ -61,6 +61,12 @@
           border-radius: 1.25rem;
           height: auto;
           width: 100%;
+          cursor: pointer;
+          transition: all 0.5s;
+
+          &:hover {
+            transform: scale(0.9);
+          }
         }
       }
 
@@ -85,6 +91,12 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover {
+              transform: scale(0.9);
+            }
           }
         }
       }

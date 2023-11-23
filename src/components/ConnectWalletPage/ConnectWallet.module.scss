@@ -60,6 +60,12 @@
         display: flex;
         gap: 1.25rem;
         align-items: center;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(0.9);
+        }
 
         img {
           width: 2.5rem;

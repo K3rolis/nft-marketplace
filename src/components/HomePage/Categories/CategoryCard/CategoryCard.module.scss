@@ -8,6 +8,12 @@
   object-fit: cover;
   object-position: center;
   overflow: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(0.9);
+  }
 
   @include bp(xl) {
     width: 15rem;
@@ -45,7 +51,14 @@
     transform: scale(1);
     background-color: #3b3b3b;
     padding: 1.25rem 1.25rem 1.5625rem;
-    font-size: 1.375rem;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include bp(sl) {
+      font-size: 1.375rem;
+    }
 
     @include bp(xl) {
       padding: 1.25rem 1.875rem 1.5625rem;
