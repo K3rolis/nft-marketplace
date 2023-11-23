@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './PublicNavigation.module.scss';
-import logoImage from '../../assets/icons/logo.svg';
+import logoImage from '../../assets/icons/Logo.svg';
 import Button from '../../common/Button/Button';
 import { ReactComponent as profileIcon } from '../../assets/buttonIcons/user.svg';
 import { routes } from '../../router/routes';

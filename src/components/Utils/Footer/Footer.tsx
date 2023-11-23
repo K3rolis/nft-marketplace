@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '../../../common/Container/Container';
 import styles from './Footer.module.scss';
 
-import logoImage from '../../../assets/icons/logo.svg';
+import logoImage from '../../../assets/icons/Logo.svg';
 import SubscribeForm from '../Forms/SubscribeForm/SubscribeForm';
 
 import discordIcon from '../../../assets/social/discord.svg';
