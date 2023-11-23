@@ -27,11 +27,7 @@ const CreateAccountForm = () => {
           confirmPassword: '',
         });
         alert(`Welcome ${inputs.username} `);
-      } else {
-        alert('check inputs');
       }
-    } else {
-      alert('check inputs');
     }
   };
 
