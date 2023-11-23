@@ -16,6 +16,7 @@ const Router = () => {
   const getRoutes = () => {
     return (
       <>
+        <Route path="*" element={<HomePage />} />
         <Route path={routes.homepage} element={<HomePage />} />
         <Route path={routes.signup} element={<SignUpPage />} />
         <Route path={routes.artist} element={<ArtistPage />} />
